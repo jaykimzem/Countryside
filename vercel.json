@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "countryside-estate",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}
