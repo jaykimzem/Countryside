@@ -29,7 +29,93 @@ function initApp() {
 
     // 5. Smooth Scrolling
     setupSmoothScroll();
+
+    // 6. Reservation Form Logic
+    setupReservationForm();
 }
+
+/**
+ * Guided Reservation Form Logic
+ */
+function setupReservationForm() {
+    const modal = document.getElementById('reservation-modal');
+    const openBtn = document.getElementById('open-reservation');
+    const closeBtn = document.getElementById('close-reservation');
+    const finishBtn = document.getElementById('finish-reservation');
+    const form = document.getElementById('reservation-form');
+
+    if (!modal || !openBtn) return;
+
+    // Open Modal
+    openBtn.addEventListener('click', () => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        resetForm();
+    });
+
+    // Close Modal
+    [closeBtn, finishBtn].forEach(btn => {
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Step Navigation
+    const nextBtns = document.querySelectorAll('.next-step');
+    const prevBtns = document.querySelectorAll('.prev-step');
+    const steps = document.querySelectorAll('.form-step');
+    const indicators = document.querySelectorAll('.step-indicator .step');
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentStep = btn.closest('.form-step');
+            const stepNum = parseInt(currentStep.id.split('-')[1]);
+
+            // Basic Validation
+            const inputs = currentStep.querySelectorAll('input, select');
+            let valid = true;
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    input.reportValidity();
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                goToStep(stepNum + 1);
+            }
+        });
+    });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentStep = btn.closest('.form-step');
+            const stepNum = parseInt(currentStep.id.split('-')[1]);
+            goToStep(stepNum - 1);
+        });
+    });
+
+    function goToStep(stepNum) {
+        steps.forEach(step => step.classList.remove('active'));
+        indicators.forEach(ind => {
+            const indStep = parseInt(ind.getAttribute('data-step'));
+            ind.classList.remove('active', 'completed');
+            if (indStep === stepNum) ind.classList.add('active');
+            if (indStep < stepNum) ind.classList.add('completed');
+        });
+
+        const targetStep = document.getElementById(`step-${stepNum}`);
+        if (targetStep) targetStep.classList.add('active');
+    }
+
+    function resetForm() {
+        form.reset();
+        goToStep(1);
+    }
+}
+
 
 /**
  * Mobile Navigation Overlay (Hamburger)

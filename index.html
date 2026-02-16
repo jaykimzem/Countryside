@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countryside Estates | Return to Quiet</title>
+    <title>Isinya Chuna Estate | Countryside Living</title>
 
     <!-- Meta Tags -->
     <meta name="description"
-        content="Countryside Estates is a second-home community in Isinya offering a quiet, premium lifestyle invitation one hour from Nairobi.">
+        content="Isinya Chuna Estate is a guided plot reservation community in Isinya offering a quiet, premium lifestyle invitation one hour from Nairobi.">
 
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
@@ -173,7 +173,7 @@
                         <p>5333 Northfield Road, Suite 300B <br> Bedford Heights, OH</p>
                     </div>
                 </div>
-                <button class="primary-btn mt-40" id="back-to-countryside">Return to Countryside</button>
+                <button class="primary-btn mt-40" id="back-to-countryside">Return to Isinya Chuna</button>
             </div>
         </div>
     </div>
@@ -185,8 +185,8 @@
         <section id="home" class="hero-slider">
             <div class="hero-slide" style="background-image: url('assets/HomeSCAAPE.png');">
                 <div class="hero-overlay">
-                    <h2 class="hero-subtitle">Where life slows… and you feel like yourself again.</h2>
-                    <h1 class="hero-title">Countryside <br> Estate</h1>
+                    <h2 class="hero-subtitle">Countryside Living.</h2>
+                    <h1 class="hero-title">Isinya Chuna <br> Estate</h1>
                     <div
                         style="max-width: 800px; color: white; margin-bottom: 30px; font-size: 1.1rem; font-weight: 300; line-height: 1.8;">
                         <p>Not because life went wrong. Not because Nairobi failed you.</p>
@@ -225,7 +225,7 @@
                 </div>
                 <div class="text-center mt-xl" style="margin-top: 60px;">
                     <h3 class="cinzel" style="color: var(--color-primary); letter-spacing: 4px;">That’s where
-                        Countryside Estate lives.</h3>
+                        Isinya Chuna Estate lives.</h3>
                 </div>
             </div>
         </section>
@@ -325,7 +325,7 @@
                     </div>
                     <div>
                         <img src="assets/Views.png" style="border-radius: 20px; box-shadow: var(--shadow-soft);"
-                            alt="Countryside Rhythm">
+                            alt="Isinya Chuna Rhythm">
                     </div>
                 </div>
             </div>
@@ -365,7 +365,8 @@
                     <h2 class="section-title text-center" style="font-size: 2.2rem;">Structure & Trust</h2>
 
                     <div style="max-width: 850px; margin: 0 auto; line-height: 1.8;">
-                        <p class="mb-20">Here at Countryside Estate, we understand that a seamless, effortless ownership
+                        <p class="mb-20">Here at Isinya Chuna Estate, we understand that a seamless, effortless
+                            ownership
                             experience is as important as the land itself. Our goal has always been to respect and honor
                             the relationships you’ve cultivated — with your clients, with your communities, and with
                             your partners.</p>
@@ -380,7 +381,7 @@
                             continuation of that excellence — a platform where clients can access land ownership in a
                             way that honors their financial discipline, without pressure or haste.</p>
 
-                        <p class="mb-20">Ownership at Countryside Estate is designed to feel natural, almost intuitive.
+                        <p class="mb-20">Ownership at Isinya Chuna Estate is designed to feel natural, almost intuitive.
                             Payments are structured to respect the pace of each client’s life — giving them the freedom
                             to integrate their investment into a life already well-managed. Cooperative Bank is not
                             merely facilitating the transaction; it is quietly enabling a new chapter in life for those
@@ -411,12 +412,12 @@
                         <p style="font-weight: 600; font-size: 1.1rem;">+254 748 276 779</p>
                         <p style="font-size: 0.9rem;">info@realtydevelopmentgroup.co.ke</p>
                     </div>
-                    <div class="card-premium" style="padding: 40px;">
-                        <span class="section-tag" style="font-size: 0.7rem; margin-bottom: 10px;">USA Office</span>
-                        <h4 style="margin-bottom: 5px;">Peter Wairegi</h4>
-                        <p style="color: var(--color-grey-medium); font-size: 0.8rem; margin-bottom: 20px;">Managing
-                            Director</p>
-                        <p style="font-weight: 600; font-size: 1.1rem;">+1 216 225 8981</p>
+                    <div class="card-premium"
+                        style="padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 2px dashed var(--color-primary);">
+                        <h4 style="margin-bottom: 15px;">Secure Your Legacy</h4>
+                        <p class="text-center mb-20" style="font-size: 0.9rem;">Reserve your preferred plot today
+                            through our guided process.</p>
+                        <button class="primary-btn" id="open-reservation">Reserve a Plot</button>
                     </div>
                 </div>
             </div>
@@ -453,7 +454,7 @@
         style="background: var(--color-black); color: rgba(255,255,255,0.6); padding: 80px 0; font-size: 0.8rem; text-align: center;">
         <div class="container">
             <img src="assets/Logo 2.png" height="50" style="margin: 0 auto 30px; opacity: 0.5;" alt="Footer Logo">
-            <p>&copy; 2026 Countryside Estate. All Rights Reserved. Operated by Realty Development Group Limited.</p>
+            <p>&copy; 2026 Isinya Chuna Estate. All Rights Reserved. Operated by Realty Development Group Limited.</p>
             <p style="margin-top: 10px;">A project rooted in trust and delivered with global standards.</p>
         </div>
     </footer>
@@ -462,6 +463,95 @@
     <div id="premium-chat-trigger"
         style="position: fixed; bottom: 110px; right: 20px; width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 900;">
         <i class="fa fa-comment-dots" style="font-size: 1.5rem;"></i>
+    </div>
+
+    <!-- RESERVATION MODAL -->
+    <div id="reservation-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="cinzel">Plot Reservation</h2>
+                <div class="close-modal" id="close-reservation">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+
+            <div class="reservation-steps">
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">3</div>
+                </div>
+
+                <form id="reservation-form">
+                    <!-- Step 1: Client Details -->
+                    <div class="form-step active" id="step-1">
+                        <span class="section-tag">Step 1</span>
+                        <h3 class="mb-20">Your Details</h3>
+                        <div class="form-group">
+                            <label for="client-name">Full Name</label>
+                            <input type="text" id="client-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email Address</label>
+                            <input type="email" id="client-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-phone">Phone Number</label>
+                            <input type="tel" id="client-phone" placeholder="+254 7XX XXX XXX" required>
+                        </div>
+                        <button type="button" class="primary-btn next-step">Next: Select Plot</button>
+                    </div>
+
+                    <!-- Step 2: Plot Selection -->
+                    <div class="form-step" id="step-2">
+                        <span class="section-tag">Step 2</span>
+                        <h3 class="mb-20">Select Your Plot</h3>
+                        <p class="mb-20">Please select your preferred plot area or number. Our team will verify
+                            availability with you.</p>
+                        <div class="form-group">
+                            <label for="plot-selection">Preferred Plot / Area</label>
+                            <select id="plot-selection" required>
+                                <option value="" disabled selected>Select an area</option>
+                                <option value="Valley View">Valley View (Near the Reserve)</option>
+                                <option value="River Breeze">River Breeze (Near the River)</option>
+                                <option value="Hilltop">Hilltop (Panoramic Views)</option>
+                                <option value="Sunrise Sector">Sunrise Sector (East Facing)</option>
+                                <option value="Other">I'll discuss with the team</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-text prev-step">Back</button>
+                            <button type="button" class="primary-btn next-step">Next: Reservation</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Confirmation & Instructions -->
+                    <div class="form-step" id="step-3">
+                        <span class="section-tag">Final Step</span>
+                        <h3 class="mb-20">Reservation Initiated</h3>
+                        <p class="mb-20">Your interest has been recorded. We believe in a human-led process to ensure
+                            your investment is secure and personal.</p>
+
+                        <div class="instruction-card">
+                            <h4>What Happens Next?</h4>
+                            <ul>
+                                <li><i class="fa fa-phone text-warm"></i> Our team will call you within 24 hours to
+                                    confirm plot availability.</li>
+                                <li><i class="fa fa-envelope text-warm"></i> You will receive an official reservation
+                                    letter via email.</li>
+                                <li><i class="fa fa-landmark-dome text-warm"></i> Deposit instructions for
+                                    <strong>Cooperative Bank</strong> will be shared privately.</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-20 asbigan text-center" style="font-size: 1.2rem;">Simple. Calm. Trustworthy.</p>
+                        <button type="button" class="primary-btn" id="finish-reservation">Close & Return</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- SCRIPTS -->
