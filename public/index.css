@@ -193,6 +193,7 @@ header.active .nav-links a {
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
@@ -208,13 +209,43 @@ header.active .nav-links a:hover {
   color: var(--color-primary);
 }
 
+.desktop-cta {
+  display: flex;
+  align-items: center;
+}
+
 .desktop-cta .btn {
-  padding: 12px 25px;
+  display: inline-block;
+  padding: 10px 22px;
   background: var(--color-primary);
   color: var(--color-white);
   font-weight: 600;
   border-radius: 5px;
   font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+.desktop-cta .btn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+header .nav-links .nav-tour-link,
+header.active .nav-links .nav-tour-link {
+  color: #14b8a6;
+  font-weight: 700;
+  background: rgba(20, 184, 166, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  transition: 0.3s;
+}
+
+header .nav-links .nav-tour-link:hover,
+header.active .nav-links .nav-tour-link:hover {
+  background: rgba(20, 184, 166, 0.2);
+  transform: translateY(-2px);
+  color: #14b8a6;
 }
 
 /* ============================================

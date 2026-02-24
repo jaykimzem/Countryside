@@ -39,18 +39,20 @@ function initApp() {
  */
 function setupReservationForm() {
     const modal = document.getElementById('reservation-modal');
-    const openBtn = document.getElementById('open-reservation');
+    const openBtns = document.querySelectorAll('#open-reservation, #open-reservation-plots');
     const closeBtn = document.getElementById('close-reservation');
     const finishBtn = document.getElementById('finish-reservation');
     const form = document.getElementById('reservation-form');
 
-    if (!modal || !openBtn) return;
+    if (!modal || openBtns.length === 0) return;
 
     // Open Modal
-    openBtn.addEventListener('click', () => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        resetForm();
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            resetForm();
+        });
     });
 
     // Close Modal
