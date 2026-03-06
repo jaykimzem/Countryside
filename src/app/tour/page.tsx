@@ -1,5 +1,16 @@
 'use client';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "3D Virtual Tour | Isinya Chuna Estate",
+    description: "Experience Isinya Chuna Estate in immersive 3D. Explore zones, plots, and scenic views from the comfort of your home.",
+    openGraph: {
+        title: "3D Virtual Tour | Isinya Chuna Estate",
+        description: "Experience Isinya Chuna Estate in immersive 3D. Explore zones, plots, and scenic views from the comfort of your home.",
+        type: 'website',
+    },
+};
 import { useState, useRef, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
