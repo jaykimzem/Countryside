@@ -182,8 +182,8 @@ function DistantHills() {
   return (
     <group>
       {hillChain.map((h, i) => (
-        <mesh key={i} position={[h.x, h.sy / 2 - 0.8, h.z]}>
-          <ellipsoidGeometry args={[h.sx, h.sy, h.sz] as never} />
+        <mesh key={i} position={[h.x, h.sy / 2 - 0.8, h.z]} scale={[h.sx, h.sy, h.sz]}>
+          <sphereGeometry args={[1, 32, 16]} />
           <meshStandardMaterial color="#7A8B65" roughness={1} metalness={0} fog />
         </mesh>
       ))}
@@ -598,7 +598,6 @@ function SceneContent({
         rayleigh={1.5}
         mieCoefficient={0.004}
         mieDirectionalG={0.85}
-        exposure={0.5}
       />
 
       {/* Warm horizon haze */}
